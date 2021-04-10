@@ -22,8 +22,8 @@ GREEN = "\033[32m"
 RESET = "\033[0m"
 BOLD    = "\033[m"
 REVERSE = "\033[m"
-#coded by mister spy
-#contact me 712083179
+#coded by MR SHADOW
+#contact INSTA : @EOQ.Z
 def logo():
         clear = "\x1b[0m"
         colors = [36, 32, 34, 35, 31, 37  ]
@@ -52,16 +52,15 @@ def getIP(site):
 	
 		site = i.strip()
 		try:
-			if 'http://' not in site:
+			if 'http://' not in site and 'https://' not in site:
 				IP1 = socket.gethostbyname(site)
-				print "IP: "+IP1
+				print "IP: "+IP1 
 				open('ips.txt', 'a').write(IP1+'\n')
-			elif 'http://' in site:
+			elif 'http://' in site or 'https://' in site:
 				url = site.replace('http://', '').replace('https://', '').replace('/', '')
 				IP2 = socket.gethostbyname(url)
 				print "IP: "+IP2
-				open('ips.txt', 'a').write(IP2+'\n')
-	
+                		open('ips.txt', 'a').write(IP2+'\n')	
 		except:
 			pass
 			
@@ -69,5 +68,7 @@ nam=raw_input('Domain List name :')
 with open(nam) as f:
     for i in f:
         getIP(i)
+
+		
 
 		
