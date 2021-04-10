@@ -1,0 +1,4 @@
+http://www.website.com/index.php?id=11
+http://www.website.com/index.php?id=12
+http://www.website.com/index.php?id=13
+http://www.website.com/index.php?id=14
